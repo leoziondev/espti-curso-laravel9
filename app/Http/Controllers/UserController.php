@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdateUserFormRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -28,7 +29,7 @@ class UserController extends Controller
         return view('users.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreUpdateUserFormRequest $request)
     {
         $data = $request->all();
         $data['password'] = bcrypt($request->password);
