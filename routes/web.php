@@ -6,6 +6,8 @@ use App\Http\Controllers\{
 };
 use App\Http\Controllers\Admin\CommentController;
 
+Route::post('/users/{id}/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::get('/users/{id}/comments/create', [CommentController::class, 'create'])->name('comments.create');
 Route::get('/users/{id}/comments', [CommentController::class, 'index'])->name('comments.index');
 
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
