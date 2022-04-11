@@ -1,12 +1,13 @@
 @extends('layouts.app')
-@section('title', 'Detalhes do Usuario')
+
+@section('title', 'Listagem do Usuário')
 
 @section('content')
+<h1 class="text-2xl font-semibold leading-tigh py-2">Listagem do usuário {{ $user->name }}</h1>
 
-<h1>Detalhes do Usuario</h1>
-
-<p>{{ $user->name }}</p>
-<p>{{ $user->email }}</p>
-<p>{{ $user->created_at }}</p>
+<ul>
+    <li>{{ $user->name }}</li>
+    <li>{{ $user->email }}</li>
+</ul>
 
 @endsection
