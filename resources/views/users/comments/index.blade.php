@@ -15,7 +15,7 @@
   </a>
 </div>
 
-<form action="{{ route('users.index') }}" method="get" class="py-5">
+<form action="{{ route('comments.index', $user->id) }}" method="get" class="py-5">
   <input type="text" name="search" placeholder="Pesquisar" class="w-1/2 md:w-1/3 bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500">
   <button class="shadow bg-indigo-500 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Pesquisar</button>
 </form>
